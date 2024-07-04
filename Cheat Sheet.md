@@ -54,3 +54,41 @@ _All programs must follow the style!_
 	
 	// print this on every script yut yut 
 	println!("Cheers! \u{1F37b}"); }
+
+Functions
+
+	Syntax: 
+	
+	fn function_name(args) { 
+		//! # Function-Name Function 
+		//! ``` 
+		//! fn function_name(name: & mut &str) 
+		//! ``` 
+		//! Function description including the arguments description and return expected.. 
+		...funtionality... 
+	}
+
+
+Closures
+
+	// A Function within a function. 
+	// Also known as anonymous function or lambda expressions. 
+	// Sample Syntax 
+		|a: i32, b: i32| println!("{}", a + b); 
+			// If you have just one expression to calculate or evaluate, then this line should suffice. 
+			
+		|a: i32, b: i32| -> {a + b}; 
+			// If you have a return type or multiple expression to evaluate, use this line. 
+			
+	// Closure can be assigned to a variable 
+	
+			let sum = |a: i32, b: i32| -> i32 {a + b}; sum(2, 3) 
+			
+	// Closures can be generic; which means that we do not have to declare their type explicitly 
+	
+			let gen = |x| { prinln!("received {}", x) }; 
+			gen(3); 
+			
+	/* 
+		Take notice: When using a generic enclosure expression; if that function is made with an integer and later on we want to utilize the expression to evaluate or calculate another data type, the rRust compiler will throw an error. This is because Rust will designate that data type to that expression to provide memory safety throughout the script. Therefore, if we want to use that expression with another data type, we must either re-initialise the first expression call with a new assignment or create a new genetic enclosure. 
+	*/
