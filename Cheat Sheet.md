@@ -74,6 +74,7 @@ Closures
 	// A Function within a function. 
 	// Also known as anonymous function or lambda expressions. 
 	// Sample Syntax 
+	
 		|a: i32, b: i32| println!("{}", a + b); 
 			// If you have just one expression to calculate or evaluate, then this line should suffice. 
 			
@@ -90,5 +91,12 @@ Closures
 			gen(3); 
 			
 	/* 
-		Take notice: When using a generic enclosure expression; if that function is made with an integer and later on we want to utilize the expression to evaluate or calculate another data type, the rRust compiler will throw an error. This is because Rust will designate that data type to that expression to provide memory safety throughout the script. Therefore, if we want to use that expression with another data type, we must either re-initialise the first expression call with a new assignment or create a new genetic enclosure. 
+		Take notice: When using a generic enclosure expression; if that function is 
+		made with an integer and later on we want to utilize the expression to 
+		evaluate or calculate another data type, the rRust compiler will throw an 
+		error. This is because Rust will designate that data type to that expression
+		to provide memory safety throughout the script. Therefore, if we want to 
+		use that expression with another data type, we must either re-initialise 
+		the first expression call with a new assignment or create a new genetic 
+		enclosure. 
 	*/
